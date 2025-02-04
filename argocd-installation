@@ -1,0 +1,10 @@
+# File: deploy-argocd.md
+
+# Deploy Argo CD to Kubernetes
+
+## Use the terminal to deploy Argo CD:
+
+```bash
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+helm upgrade --install argocd argo/argo-cd --set-string configs.params."server\.disable\.auth"=true --version 7.1.1 --create-namespace -n argocd
