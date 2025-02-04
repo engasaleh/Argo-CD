@@ -8,7 +8,7 @@
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm upgrade --install argocd argo/argo-cd --set-string configs.params."server\.disable\.auth"=true --version 7.1.1 --create-namespace -n argocd
-
+```
 
 
 # Accessing Argo CD UI and Retrieving Admin Password
@@ -20,7 +20,7 @@ The **password** is randomly generated during installation. To retrieve it, run 
 
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-
+```
 
 - Here, you maybe need a privilage, so you will use "sudo"
 # Install ArgoCD CLI:-
