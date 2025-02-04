@@ -22,7 +22,7 @@ The **password** is randomly generated during installation. To retrieve it, run 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 
 
-
+- Here, you maybe need a privilage, so you will use "sudo"
 # Install ArgoCD CLI:-
 
 ```bash
