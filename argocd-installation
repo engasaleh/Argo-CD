@@ -23,6 +23,13 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 
 
+# Install ArgoCD CLI:-
+
+```bash
+curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.11.2/argocd-linux-amd64
+chmod +x /usr/local/bin/argocd
+```
+
 # Deleting the Initial Admin Secret
 For security reasons, it is recommended to delete the initial secret after retrieving the password. Run:
 ```bash
